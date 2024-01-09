@@ -1,0 +1,23 @@
+# - clean:
+#     ~/:
+#       force: false
+#     ~/.config:
+#       recursive: true
+
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- link:
+    # tmux
+    ~/.tmux.conf:
+      path: tmux/.tmux.conf
+      force: true
+    ~/.tmux/plugins:
+      path: tmux/.tmux/plugins
+    # git
+    # nvim
+    ~/.config/nvim:
+      path: nvim
+      
