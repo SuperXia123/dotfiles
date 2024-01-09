@@ -16,6 +16,8 @@
       force: true
     ~/.tmux/plugins:
       path: tmux/.tmux/plugins
+    ~/.tmux/tmuxifier-layouts:
+      path: tmux/.tmux/tmuxifier-layouts
     # git
     # nvim
     ~/.config/nvim:
