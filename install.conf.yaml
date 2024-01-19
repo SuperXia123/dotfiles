@@ -22,4 +22,8 @@
     # nvim
     ~/.config/nvim:
       path: nvim
+    # neovide
+    ~/.config/neovide/config.toml:
+      path: neovide/config.toml
+
       
