@@ -4,5 +4,5 @@ vsync = true
 maximized = true
 srgb = false
 idle = false
-neovim-bin = "/home/xia/Software/neovim/nvim" # in reality found dynamically on $PATH if unset
+neovim-bin = "/home/xia/Softwares/neovim/nvim" # in reality found dynamically on $PATH if unset
 frame = "full"
