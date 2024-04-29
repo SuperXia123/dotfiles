@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=neovide
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=/home/xia/Softwares/neovide/neovide
+Icon=neovide.png
+Type=Application
+StartupNotify=false
+Categories=TextEditor;Development;IDE;
+Actions=new-empty-window;
+Keywords=neovide;

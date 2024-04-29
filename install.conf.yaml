@@ -25,5 +25,5 @@
     # neovide
     ~/.config/neovide/config.toml:
       path: neovide/config.toml
-
-      
+    /usr/share/applications/neovide.desktop:
+      path: neovide/desktop/neovide.desktop
