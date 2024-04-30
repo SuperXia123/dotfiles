@@ -21,9 +21,9 @@
     # git
     # nvim
     ~/.config/nvim:
-      path: nvim
+      path: neovim/config
     # neovide
     ~/.config/neovide/config.toml:
-      path: neovide/config.toml
+      path: neovide/config/config.toml
     /usr/share/applications/neovide.desktop:
       path: neovide/desktop/neovide.desktop
