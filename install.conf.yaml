@@ -11,19 +11,19 @@
 
 - link:
     # tmux
-    ~/.tmux.conf:
+    /home/xia/.tmux.conf:
       path: tmux/.tmux.conf
       force: true
-    ~/.tmux/plugins:
+    /home/xia/.tmux/plugins:
       path: tmux/.tmux/plugins
-    ~/.tmux/tmuxifier-layouts:
+    /home/xia/.tmux/tmuxifier-layouts:
       path: tmux/.tmux/tmuxifier-layouts
     # git
     # nvim
-    ~/.config/nvim:
+    /home/xia/.config/nvim:
       path: neovim/config
     # neovide
-    ~/.config/neovide/config.toml:
+    /home/xia/.config/neovide/config.toml:
       path: neovide/config/config.toml
     /usr/share/applications/neovide.desktop:
       path: neovide/desktop/neovide.desktop
