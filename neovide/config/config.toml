@@ -1,8 +1,32 @@
-wsl = false
-no-multigrid = false
-vsync = true
-maximized = true
-srgb = false
-idle = false
-neovim-bin = "/home/xia/Softwares/neovim/nvim" # in reality found dynamically on $PATH if unset
+fork = false
 frame = "full"
+idle = false
+maximized = true
+neovim-bin = "/home/xia/Softwares/neovim/nvim" # in reality found dynamically on $PATH if unset
+no-multigrid = false
+srgb = false
+tabs = true
+theme = "auto"
+title-hidden = true
+vsync = true
+wsl = false
+
+[font]
+size = 12.5
+hinting = "full"
+edging = "antialias"
+
+[[font.normal]]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+[[font.normal]]  # fallback
+family = "Noto Sans CJK SC" 
+style = "Normal"
+
+[[font.bold]]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+[[font.bold]]  # fallback
+family = "Noto Sans CJK SC"
+style = "Bold"
+
