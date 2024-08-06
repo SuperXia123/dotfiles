@@ -25,8 +25,6 @@
     # neovide
     ~/.config/neovide/config.toml:
       path: neovide/config/config.toml
-    /usr/share/applications/neovide.desktop:
-      path: neovide/desktop/neovide.desktop
     # wezterm
     ~/.config/wezterm/wezterm.lua:
       path: wezterm/wezterm.lua
