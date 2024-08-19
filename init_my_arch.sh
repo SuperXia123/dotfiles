@@ -15,7 +15,7 @@ sudo cat /etc/pacman.d/mirrorlist.backup >> /etc/pacman.d/mirrorlist
 sudo rm /etc/pacman.d/mirrorlist.backup
 echo "Mirror source has been changed to Tsinghua University."
 # 更新软件包数据库
-# sudo pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm
 
 ####################################################################
 # 软件安装
@@ -36,8 +36,21 @@ sudo pacman -S --noconfirm --needed python
 sudo pacman -S --noconfirm --needed ripgrep  
 # xclip
 sudo pacman -S --noconfirm --needed xclip
-# wezterm
-flatpak install flathub org.wezfurlong.wezterm
+# gcc
+sudo pacman -S --noconfirm --needed gcc
+# gdb
+sudo pacman -S --noconfirm --needed gdb
+# cmake
+echo "Installing cmake..."
+sudo pacman -S --noconfirm --needed cmake
+# unzip
+echo "----------------------------------------"
+echo "Installing unzip..."
+sudo pacman -S --noconfirm --needed unzip
+# xsel
+echo "----------------------------------------"
+echo "Installing xsel..."
+sudo pacman -S --noconfirm --needed xsel
 
 ####################################################################
 # git
@@ -71,5 +84,51 @@ if [ ! -d ~/.dotfiles ]; then
 else
 	echo "Dotfiles exists."
 fi
-cd ~/.dotfiles
-./install
+~/.dotfiles/install
+
+####################################################################
+# Repositories
+####################################################################
+if [ ! -d ~/Repositories ]; then
+  mkdir ~/Repositories
+fi
+cd ~/Repositories
+if [ ! -d ~/Repositories/Playground ]; then
+	echo "Cloneing Playground..."
+  git clone git@github.com:SuperXia123/Playground.git
+else
+	echo "Playground exists."
+fi
+
+####################################################################
+# OH MY ZSH
+####################################################################
+# zsh
+echo "----------------------------------------"
+echo "Installing zsh..."
+sudo pacman -S --noconfirm --needed zsh
+# oh-my-zsh
+echo "Installing oh-my-zsh..."
+echo $(which zsh) | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+# install oh-my-zsh
+# 克隆oh-my-zsh仓库
+git clone https://gitee.com/mirrors/oh-my-zsh.git ~/.oh-my-zsh
+# 使用oh-my-zsh的模板.zshrc文件
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+# plugin auto-suggestions
+git clone https://gitee.com/Greenplumwine/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+if ! grep -q 'zsh-autosuggestions' ~/.zshrc; then
+    sed -i '/^plugins=(/ s/)/ zsh-autosuggestions)/' ~/.zshrc
+fi
+# plugin zsh-syntax-highlighting
+git clone https://gitee.com/Greenplumwine/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+if ! grep -q 'zsh-syntax-highlighting' ~/.zshrc; then
+    sed -i '/^plugins=(/ s/)/ zsh-syntax-highlighting)/' ~/.zshrc
+fi
+# zsh-z
+git clone https://gitee.com/huyifeng0829/zsh-z.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+if ! grep -q 'zsh-z' ~/.zshrc; then
+    sed -i '/^plugins=(/ s/)/ zsh-z)/' ~/.zshrc
+fi
+
