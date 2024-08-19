@@ -33,7 +33,7 @@ sudo pacman -S --noconfirm --needed openssh
 # python
 sudo pacman -S --noconfirm --needed python
 # ripgrep: support live_grep in telescope.nvim
-sudo pacman -S --noconfirm --needed ripgrep  
+sudo pacman -S --noconfirm --needed ripgrep
 # xclip
 sudo pacman -S --noconfirm --needed xclip
 # gcc
@@ -47,16 +47,12 @@ sudo pacman -S --noconfirm --needed cmake
 echo "----------------------------------------"
 echo "Installing unzip..."
 sudo pacman -S --noconfirm --needed unzip
-# xsel
-echo "----------------------------------------"
-echo "Installing xsel..."
-sudo pacman -S --noconfirm --needed xsel
 
 ####################################################################
 # git
 ####################################################################
- git config --global user.email "xiayufenfeng@163.com"
- git config --global user.name "xia"
+# use delta as pager
+sudo pacman -S --noconfirm --needed git-delta
 
 ####################################################################
 # init ssh-key

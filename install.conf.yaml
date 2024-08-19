@@ -19,12 +19,17 @@
     ~/.tmux/tmuxifier-layouts:
       path: tmux/.tmux/tmuxifier-layouts
     # git
+    ~/.gitconfig:
+      path: git/config.toml
+    # lazygit
+    ~/.config/lazygit/config.yml:
+      path: lazygit/config.yml
     # nvim
     ~/.config/nvim:
       path: neovim/config
     # neovide
     ~/.config/neovide/config.toml:
-      path: neovide/config/config.toml
+      path: neovide/config/config_linux.toml
     # wezterm
     ~/.config/wezterm/wezterm.lua:
       path: wezterm/wezterm.lua
